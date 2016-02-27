@@ -7,7 +7,7 @@ midi.init()
 output = midi.Output(2)
 
 def OnKeyPress(event):
-	if event.Ascii == 97: #Virtual Key Id of right arrow key
+	if event.Key == "Right": #Virtual Key Id of right arrow key
 		output.write_short(0xc0, 0)
 		
 	if event.Ascii == 96:
